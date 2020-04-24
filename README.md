@@ -5,7 +5,7 @@
    其中的红线报错提醒!   
 3. xadmin的使用方法需要自行查阅相关文档
 4. 关于'Uncaught Error: Option 'ajax' is not allowed for Select2 when attached to a <select> element.'
-   相关(也就是在xadmin中autocomplete自动补充下拉框不生效)问题的说明:
+   相关(也就是在xadmin中autocomplete自动补充下拉框不生效)问题的说明(找不到更好的解决方案):
         这个问题是由于在adminforms.py中的class Meta类中的fields引起的,在其中定义了多个
         具有下拉select选项的字段, 其中的status和category, tag字段有冲突,暂时的解决办法是
         去掉status字段,但不是最好的解决方案(
@@ -38,4 +38,4 @@
          即 python3 manage.py makemigrations blog; python3 manage.py migrate blog;
 7. djangorestframework 在进行URL反向解析时不支持namespace命名空间,需要删除该属性;
 8. post模型中tag字段是多对多类型,不是外键类型!!!
-9. xadmin2.0适配Django2.0时, 后台界面出现 报错信息 找不到错误所在  暂时无解(可能是由于select2模块不兼容的原因select2.full.js文件 和 select2.js)
+9. xadmin2.0适配Django2.0时, admin管理后台界面console出现 报错信息 找不到错误所在  暂时无解(可能是由于select2模块不兼容的原因select2.full.js文件 和 select2.js)
